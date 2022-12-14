@@ -1,4 +1,4 @@
-use crate::pieces::Draw;
+use crate::{pieces::Draw, board::draw_board};
 
 mod pieces;
 mod board;
@@ -9,4 +9,6 @@ fn main() {
 
     println!("black pawn: img {}, pos {}", {&black_pawn.draw().unwrap()}, {&black_pawn.pos});
     println!("white pawn: img {}, pos {}", {&white_pawn.draw().unwrap()}, {&white_pawn.pos});
+
+    draw_board();
 }

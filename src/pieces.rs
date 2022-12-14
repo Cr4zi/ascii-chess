@@ -17,8 +17,8 @@ pub trait Draw<'a> {
 impl Draw<'_> for Pawn<'static> {
     fn draw(self: &'_ Self) -> Result<String, &str>{
         let emoji = match self.color {
-            Color::Black => Ok(String::from("♙")),
-            Color::White => Ok(String::from("♟")),
+            Color::Black => Ok(String::from("♟")),
+            Color::White => Ok(String::from("♙")),
         };
         emoji
     }
